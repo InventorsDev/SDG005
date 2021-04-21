@@ -1,0 +1,86 @@
+/*
+
+Template: BizBag - Multipurpose Business Startup HTML Template
+Author: iqonicthemes.in
+Version: 1.0
+Design and Developed by: iqonicthemes.in
+
+
+*/
+@media (min-width:576px) {
+	.container { max-width: 540px }
+}
+@media (min-width:768px) {
+	.container { max-width: 720px }
+}
+@media (min-width:992px) {
+	.container { max-width: 960px }
+}
+@media (min-width:1200px) {
+	.container { max-width: 1140px; }
+}
+@media (min-width:1400px) {
+	.container { max-width: 1366px; }
+}
+@media(max-width:1399px) {
+	#purchase h1 { font-size: 45px; }
+}
+@media(max-width:1365px) { }
+@media(max-width:1339px) { }
+@media(max-width:1199px) {
+
+	.overview-block-ptb { padding: 80px 0; }
+	.overview-block-pt { padding: 80px 0 0 0; }
+	.overview-block-pb { padding: 0 0 80px 0; }
+
+
+	.btn-purchase .button { padding: 8px 16px; font-size: 14px; }
+}
+@media(max-width:992px) {
+	header .btn-purchase { top: -51px; position: absolute; right: 12%; }
+	header.menu-sticky .btn-purchase { top: -48px; }
+	header .container-fluid { padding: 0 50px }
+	header.menu-sticky .container-fluid { padding: 0 50px }
+	header .navbar-light .navbar-collapse { position: absolute; width: 100%; top: 75px; }
+	header .navbar-light .navbar-nav { background: #ffffff; padding: 10px; border: 1px solid #0084ff; }
+	.navbar-light .navbar-toggler { background: #ffffff; }
+	header .navbar-light .navbar-nav .nav-link, header .navbar-light .navbar-nav .nav-link:focus { margin: 0; }
+		header .navbar-light .navbar-nav .nav-link, header .navbar-light .navbar-nav .nav-link:focus { color: #142c4b }
+		section { padding: 80px 0; }
+		header .navbar-light .navbar-nav li.active .nav-link, header .navbar-light .navbar-nav li .nav-link:hover {color: #0084ff;}
+	}
+@media(max-width:979px) {
+	header{padding: 15px 0 0;}
+	header .btn-purchase { right: 18%; }
+}
+@media(max-width:767px) {
+	.tab-box li.nav-item { width: 50%;}
+	.tab-box .nav-pills .nav-link{padding: 20px 10px;}
+	section { padding: 50px 0; }
+	.overview-block-ptb { padding: 50px 0; }
+	.overview-block-pt { padding: 50px 0 0 0; }
+	.overview-block-pb { padding: 0 0 50px 0; }
+	.iq-objects-style-1::before { width: 100%; }
+	.desktop { margin-top: 50px; }
+	header { padding: 5px 0; }
+	header.menu-sticky { padding: 3px 0; }
+	#purchase h1 { font-size: 30px; line-height: 40px; }
+	.container-fluid { padding: 0 30px; }
+	header.menu-sticky .container-fluid { padding: 0 15px; }
+	header .container-fluid { padding: 0 15px; }
+	.title-box { margin-bottom: 50px; }
+	.feature-effect-box { text-align: center; }
+	h3 { font-size: 24px; }
+	.iq-componets p{font-size: 14px;}
+	.feature-effect-box img { margin: 0 auto; display: block; margin-bottom: 15px; }
+}
+@media(max-width:543px) {
+	.arrow-one, .arrow-two { display: none; }
+	.wp-pagebuilder { top: -100px !important; }
+}
+@media(max-width:479px) {
+	.btn-purchase .button { display: none; }
+	header a.navbar-brand img,header.main-header.menu-sticky .navbar .navbar-brand .logo-two{  height: 24px;}
+	header{background:#089bab;}
+	header { position: relative; display: block;}
+}
