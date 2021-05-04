@@ -84,55 +84,14 @@
                                     </li>
                                     <li>
                                        <div class="timeline-dots border-danger"></div>
-                                       <h6 class="">Reminder : Opertion Time!</h6>
+                                       <h6 class="">Reminder : Next cycle!</h6>
                                        <small class="mt-1">20 November 2019</small>
-                                    </li>
-                                    <li>
-                                       <div class="timeline-dots border-primary"></div>
-                                       <h6 class="mb-1">Patient Call</h6>
-                                       <small class="mt-1">19 November 2019</small>
                                     </li>
                                  </ul>
                               </div>
                            </div>
                         </div>
                         <div class="col-md-12">
-                           <div class="iq-card">
-                              <div class="iq-card-header d-flex justify-content-between">
-                                 <div class="iq-header-title">
-                                    <h4 class="card-title">Experience</h4>
-                                 </div>
-                              </div>
-                              <div class="iq-card-body">
-                                 <table class="table mb-0 table-borderless">
-                                  <thead>
-                                      <tr>
-                                          <th scope="col">Year</th>
-                                          <th scope="col">Department</th>
-                                          <th scope="col">Position</th>
-                                          <th scope="col">Hospital</th>
-                                          <th scope="col">Feedback</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <td>2014 - 2018</td>
-                                          <td>MBBS, M.D</td>
-                                          <td>Senior doctor</td>
-                                          <td>Midtown Medical Clinic</td>
-                                          <td><span class="badge badge-primary">Good</span></td>
-                                      </tr>
-                                      <tr>
-                                          <td>2018 - 2020</td>
-                                          <td>M.D. of Medicine</td>
-                                          <td>Associate Prof.</td>
-                                          <td>Netherland Medical College</td>
-                                          <td><span class="badge badge-success">excellence</span></td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                              </div>
-                           </div>
                         </div>
                      </div>
                   </div>

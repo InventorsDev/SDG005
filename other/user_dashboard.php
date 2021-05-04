@@ -1,9 +1,9 @@
 <?php include("conn/style-head.php"); ?>
 <?php include("conn/popup.php"); ?>
 <?php 
-$id = $_SESSION['id'];
-$sql = "SELECT * FROM user_details WHERE id = '$id' ";
-$result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
+   $id = $_SESSION['id'];
+   $sql = "SELECT * FROM user_details WHERE id = '$id' LIMIT 1";
+   $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 ?>
          <!-- TOP Nav Bar END -->
             <div class="container-fluid">
@@ -70,7 +70,7 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Nearest Treatment</h4>
+                              <h4 class="card-title">Today's Date</h4>
                            </div>
                         </div>
                         <div class="iq-card-body smaill-calender-home">
@@ -78,36 +78,24 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
                         </div>
                      </div>
                   </div>
-                     <?php while($values = mysqli_fetch_array($result)){ ?>                  
+               <?php //while($values = mysqli_fetch_array($result)){ ?>    
                   <div class="col-lg-4">
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                         <div class="iq-card-body">
                            <h6>Cycle - Start</h6>
-                           <h3><b><?php echo $values['date_last_seen'] ?> </b></h3>
+                           <h3><b><?php //echo $values['date_last_seen'] ?> </b></h3>
                         </div>
                         <div id="wave-chart-7"></div>
                      </div>
                      <div class="iq-card iq-card-block iq-card-stretch iq-card-height-half">
                         <div class="iq-card-body">
-                           <h6>Cycle - Ends &nbsp   (<?php echo $values['cycle_length'] ?>) days</h6>
-                           <h3><b><?php echo $values['predicted_date'] ?> </b></h3>
+                           <h6>Cycle - Ends &nbsp   (<?php //echo $values['cycle_length'] ?>) days</h6>
+                           <h3><b><?php ////echo $values['predicted_date'] ?> </b></h3>
                         </div>
                         <div id="wave-chart-8"></div>
                      </div>
                   </div>
-                  <?php } ?>
-                  <div class="col-lg-6">
-                     <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-                        <div class="iq-card-header d-flex justify-content-between">
-                           <div class="iq-header-title">
-                              <h4 class="card-title">Patient overview</h4>
-                           </div>
-                        </div>
-                        <div class="iq-card-body pl-0 pr-0">
-                           <div id="home-chart-03" style="height: 280px;"></div>
-                        </div>
-                     </div>
-                  </div>
+                  <?php //} ?>
                   </div>
                </div>
             </div>

@@ -1,16 +1,66 @@
 <?php include("conn/style-head.php"); ?>
 <?php 
 $id = $_SESSION['id'];
-$sql = "SELECT * FROM user_details WHERE id = '$id' ";
+$sql = "SELECT * FROM user_details WHERE user_id = '$id' ORDER BY id DESC";
 $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
 ?>
+<?php 
+    if(isset($_POST['submit'])){
+      $period_id = $_POST['delete'];
+      $query2 = "DELETE FROM user_details WHERE id = $period_id ";
+      $result2 = mysqli_query($connection,$query2);
+      if ($result) {
+         $success = "hey";      
+     }else{
+         $failed = "hey";
+     }
+    } 
+ ?>
+ <?php   if (isset($success)) { ?>
+    <div class="container"><br>
+        <div class="col-sm-12 col-lg-6">
+            <div class="iq-card">
+                <div class="alert text-white bg-success" role="alert">
+                        <div class="iq-alert-icon">
+                            <i class="ri-alert-fill"></i>
+                        </div>
+                        <div class="iq-alert-text"><b>Period Deleted !</b> successfully!</div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="ri-close-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div><!-- <script type="text/javascript">
+        alert("user inserted successfull...You can proceed to Login")
+    </script> -->
+<?php } ?>
+<?php   if (isset($failed)) { ?>
+<div class="container"><br>
+    <div class="col-sm-12 col-lg-6">
+        <div class="iq-card">
+            <div class="alert text-white bg-danger" role="alert">
+                <div class="iq-alert-icon">
+                    <i class="ri-information-line"></i>
+                </div>
+                <div class="iq-alert-text">An <b>Error Occurred!</b></div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div><!-- <script type="text/javascript">
+        alert("user inserted successfull...You can proceed to Login")
+    </script> -->
+<?php } ?>
 <div class="container-fluid">
                <div class="row">
                   <div class="col-sm-12">
                      <div class="iq-card">
                         <div class="iq-card-header d-flex justify-content-between">
                            <div class="iq-header-title">
-                              <h4 class="card-title">Your Period - List</h4>
+                              <h4 class="card-title">Your Tracked Period - List</h4>
                            </div>
                         </div>
                      </div>
@@ -24,7 +74,7 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
                            </div>
                            <div class="iq-doc-info mt-3">
                               <h4> <?php echo $_SESSION['fullname']; ?></h4>
-                              <p class="mb-0" >User - Id: <?php echo $values['id'] ?></p>
+                              <p class="mb-0" >User - Id: <?php echo $values['user_id'] ?></p>
                               <!-- <a href="javascript:void();">www.demo.com</a> -->
                            </div>
                            <div class="iq-doc-description mt-2">
@@ -41,13 +91,12 @@ $result = mysqli_query($connection, $sql) or die(mysqli_error($connection));
                               </p>
                            </div>
                            <div class="iq-doc-social-info mt-3 mb-3">
-                              <ul class="m-0 p-0 list-inline">
-                                 <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                                 <li><a href="#"><i class="ri-twitter-fill"></i></a> </li>
-                                 <li><a href="#"><i class="ri-google-fill"></i></a></li>
-                              </ul>
+                           <a href="set-reminder.php" class="btn btn-success">Set-Reminder</a>
                            </div>
-                           <a href="profile.html" class="btn btn-danger">Delete Record!</a>
+                           <form action="#" method="post">
+                            <button class="btn btn-danger" name="submit">Delete Record</button>
+                            <input type="hidden" name="delete" value="<?php echo $values['id']; ?>">
+                          </form>
                         </div>
                      </div>
                   </div>

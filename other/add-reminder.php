@@ -1,7 +1,7 @@
 <?php include("conn/style-head.php"); ?>
 <?php 
      if (isset($_POST['submit'])) {
-      $id =  $_SESSION['id'];
+      $user_id =  $_SESSION['id'];
       $monthly_flow = $_POST['monthly_flow'];
       $last_seen = date('Y-m-d', strtotime($_POST['last_seen']));
       $duration = $_POST['duration'];
@@ -12,12 +12,11 @@
       $pre_date = $last_seen;
       $add_days = $cycle_length;
       $pre_date = date('Y-m-d', strtotime($pre_date) + (24*3600* $add_days));
-      echo $pre_date;
       $predicted_date = $pre_date;
       
 
-    $sql = "INSERT INTO user_details (id, cycle_weight, date_last_seen, duration, cycle_length, cycle_problems, predicted_date ) 
-    	    VALUES('{$id}', '{$monthly_flow}', '{$last_seen}', '{$duration}','{$cycle_length}', '{$experience}', '{$predicted_date}'  )";
+    $sql = "INSERT INTO user_details (user_id, cycle_weight, date_last_seen, duration, cycle_length, cycle_problems, predicted_date ) 
+    	    VALUES('{$user_id}', '{$monthly_flow}', '{$last_seen}', '{$duration}','{$cycle_length}', '{$experience}', '{$predicted_date}'  )";
     $result = mysqli_query($connection,$sql);
     if ($result) {
         $success = "hey";      
@@ -75,7 +74,7 @@
                            </div>
                         </div>
                         <div class="iq-card-body">
-                           <form id="form-wizard1" class="text-center mt-4" action="#" method="POST">
+                           <form id="form-wizard1" action="#" method="POST">
                            <div class="form-group">
                                  <label for="exampleFormControlSelect1">How's your monthly flow?</label>
                                  <select class="form-control" name="monthly_flow" id="exampleFormControlSelect1">
