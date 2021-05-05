@@ -24,22 +24,42 @@ php require twilio/sdk
 ```
 
 ## Usage
+The app can be used basically for thr following purposes:
+1. Calculating user menstural cycle
+2. Setting reminders 
+3. A one-time free Sanitary pad order.
+4. Automated SMS to notify user of the predicted date of menstural cycle.
 
-```python
-import foobar
+## Support
+If you are facing any issue of problem undertanding or getting started with the application
+kindly reach out to this email: iamholumeedey007@gmail.com
+We will attend toall questions, and provide support. 
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
+## Roadmap
+1. Project Inception - April 5th, 2021.
+2. Project Design - April 7th - 28th, 2021.
+3. Beta Release - May 5th, 2021.
+4. Version 2.0 - To be announced soon!
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+All the codes and assets of this application is all hosted on Githib.
+It is Open Source and it is quite open for contributions.
+To make changes make sure you star the repo first then you can make your pull request.
+Admin will merge any pull request that adds a new feature to the app or modifies the feaatures already on the application
+State if you are open to contributions and what your requirements are for accepting them.
 
-Please make sure to update tests as appropriate.
+## More Documentation
+1. [Github](https:github.com)
+2. [Twilio](https:twilio.com)
+3. [PHP](https:github.com)
+4. [MySql](https:github.com)
+5. [JavaScript](https:github.com)
+
+
+
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[Terms and Conditions](https://choosealicense.com/licenses/gpl-3.0/#)
 
 
 
